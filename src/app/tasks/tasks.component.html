@@ -1,5 +1,12 @@
 <h1>
   Task List Application
 </h1>
-<app-task-list></app-task-list>
-<app-task-new></app-task-new>
+
+<form (submit)="onSubmit()">
+  <label> Title</label>
+  <input [(ngModel)]="title.content">
+  <input type="submit">
+</form>
+<label>Delete First Item</label>
+<button (click)="OnDelete()">Delete Go</button>
+<app-task-list [(keyword)]="title.content"></app-task-list>

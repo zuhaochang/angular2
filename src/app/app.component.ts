@@ -22,4 +22,3 @@ title = 'app works!';
 
 
 }
-bootstrap(AppComponent)

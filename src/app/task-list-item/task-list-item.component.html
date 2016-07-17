@@ -1,0 +1,5 @@
+<li>
+  <span [class.completed]="task.completed">{{ task.title }} - {{ task.completed }}</span>
+  <button (click)="completeTask(task)">
+    Click to complete</button>
+</li>

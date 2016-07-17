@@ -1,8 +1,8 @@
 <h4>
-Create a Task
+Create a Task <i>{{ keyword }}</i>
 </h4>
 
 <form  (submit)="onSubmit()">
-  <input [(ngModel)]="task.title">
+  <input [(ngModel)]="keyword">
   <input type="submit">
 </form>

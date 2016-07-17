@@ -1,0 +1,10 @@
+<h4>
+  Task List
+</h4>
+<ui>
+    <li *ngFor="let task of taskService.tasks">
+    <span [class.completed]="task.completed">{{ task.title }} - {{ task.completed }}</span>
+    <button (click)="completeTask(task)">
+      Click to complete</button>
+    </li>
+</ui>

@@ -9,7 +9,7 @@ import { TaskService } from '../task.service';
 export class TaskNewComponent implements OnInit {
   task;
 
-  constructor(public taskService:TaskService) {
+  constructor(public taskService:TaskService = null) {
     this.task = {title:"",completed: false};
   }
 

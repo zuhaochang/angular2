@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { TaskListComponent } from '../task-list';
-import { TaskNewComponent } from '../task-new';
 import { BaseComponent } from '../base-component';
 import { TaskService } from '../task.service';
 
@@ -9,11 +8,11 @@ import { TaskService } from '../task.service';
   selector: 'app-tasks',
   templateUrl: 'tasks.component.html',
   styleUrls: ['tasks.component.css'],
-  directives:[TaskListComponent,TaskNewComponent]
+  directives:[TaskListComponent]
 
 })
 export class TasksComponent extends BaseComponent {
-  private title: any = { content: "Hello World" };
+  private title: any = { content: "testforchange" };
   private task;
 
   constructor(private taskService: TaskService = null) {
@@ -22,9 +21,9 @@ export class TasksComponent extends BaseComponent {
   }
 
   onSubmit(){
-    this.task.title = this.title.content;
-    this.taskService.addTask(this.task);
-    this.task={title:"",completed: false};
+    this.task.title = this.title.content;//輸入的content給到taskservice建構子task裡的title名稱
+    this.taskService.addTask(this.task);//呼叫service裡的add method
+    //this.task={title:"",completed: false};
   }
 
   OnDelete() {

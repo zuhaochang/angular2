@@ -15,7 +15,7 @@ export class TaskListComponent extends BaseComponent{
   @Input() keyword: any;
 
   constructor(public taskService: TaskService = null) {
-    super();
+    super();//每取一個ngFor都會去呼叫繼承的方法BaseComponent
   }
 
   ngOnInit() {

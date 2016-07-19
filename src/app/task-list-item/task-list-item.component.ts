@@ -16,6 +16,7 @@ export class TaskListItemComponent extends BaseComponent {
   }
 
   ngOnInit() {
+    super.ngOnInit();
   }
 
   completeTask(task){
